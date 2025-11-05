@@ -655,3 +655,28 @@ h2 {
     .lightbox img { max-width: 95%; max-height: 70vh; }
     .lightbox .close, .lightbox button { font-size: 35px; }
 }
+/* Assure que le body prend toute la hauteur */
+html, body {
+    height: 100%;
+}
+
+/* Container principal pour "pousser" le footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Contenu principal qui prend tout l'espace disponible */
+main {
+    flex: 1;
+}
+
+/* Footer en bas */
+footer {
+    background: linear-gradient(#2E8B57, #90EE90);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}

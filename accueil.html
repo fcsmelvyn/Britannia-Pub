@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Accueil - Britannia Pub</title>
+    <link href="style/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="accueil.html">Accueil</a>
+                <a href="Britannia_Pub_Menu.html">Britannia pub menu</a>
+                <a href="Evénements.html">Evénements</a>
+                <a href="UnderBrit.html">UnderBrit</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="accueil-photos">
+            <div>
+                <img src="images/logo_blanc.svg" alt="logo arrière plan" />
+            </div>
+        </section>
+
+
+    <section id="contact" class="contact-section">
+        <h2>Des questions ? Contacte-nous.</h2>
+        <div class="contact-info">
+            <div class="info-block">
+                <h3>📍 Adresse</h3>
+                <p> Rue de l'Hôtel-de-Ville 2, 1920 Martigny</p>
+            </div>
+            <div class="info-block">
+                <h3>📞 Téléphone</h3>
+                <p><a href="tel: +41277235303"> 027 723 53 03</a></p>
+            </div>
+            <div class="info-block">
+                <h3>📩 Email</h3>
+                <p><a href="mailto:contact@lebarhoublon.fr">julienbesson@hotmail.com</a></p>
+            </div>
+            <div class="info-block">
+                <h3>🕒 Horaires</h3>
+                <p>Lun - Jeu : 9h - 1h<br>Ven : 9h - 2h<br>Sam : 11h - 2h<br>Dim : 16h - 1h</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div>
+            <a target="_blank" href="https://www.google.com/maps/place/Britannia+Pub/@46.100625,7.072781,17z/data=!3m1!4b1!4m6!3m5!1s0x478ec9d17fe8b8c7:0x8e5212f1ad8052a8!8m2!3d46.100625!4d7.072781!16s%2Fg%2F1tg6tm5j?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" class="lien-icone">
+                <img src="images/logo_maps.svg" class="googleMaps" alt="Logo maps" />
+            <a target="_blank" href="https://www.facebook.com/MyBritanniaPub/photos" class="lien-icone">
+                <img src="images/logo-facebook.svg" class="facebook" alt="Logo facebook" />
+            </a>
+            <a target="_blank" href="https://www.instagram.com/britanniapub1920/" class="lien-icone">
+                <img src="images/instagram.svg" class="instagram" alt="Logo Instagram" />
+            </a>
+        </div>
+    </footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let formData = new FormData(this);
+
+    fetch("send.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        let responseEl = document.getElementById("formResponse");
+        if (data.status === "success") {
+            responseEl.textContent = data.message;
+            responseEl.style.color = "green";
+            document.getElementById("contactForm").reset();
+        } else {
+            responseEl.textContent = data.message;
+            responseEl.style.color = "red";
+        }
+    })
+    .catch(error => {
+        document.getElementById("formResponse").textContent = "Erreur d’envoi.";
+        document.getElementById("formResponse").style.color = "red";
+        console.error(error);
+    });
+});
+</script>
+</body>
+</html>

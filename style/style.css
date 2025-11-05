@@ -1,0 +1,657 @@
+/* === Reset global pour uniformiser les styles === */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* === Styles de base du body === */
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+  background-color: #000000;
+  color: white;
+}
+
+/* === Liens généraux === */
+a {
+  color: #90EE90;
+  /* Vert clair visible sur fond noir */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Texte en italique (personnalisé) === */
+em {
+  color: #a5b4fc;
+  font-style: normal;
+}
+
+/* === Titres principaux === */
+h1 {
+  font-size: 3.5em;
+  color: #90EE90;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* === Paragraphes et listes === */
+p,
+li {
+  font-size: 1.1em;
+  color: #ffffff;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+/* === Boutons d’appel à l’action (CTA) === */
+.cta {
+  display: inline-block;
+  background-color: #2E8B57;
+  border-radius: 50px;
+  padding: 20px 30px;
+  color: white;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background: linear-gradient(#2E8B57, #90EE90);
+  text-decoration: none;
+}
+
+/* === Liens avec icônes === */
+.lien-icone {
+  margin-left: 30px;
+}
+
+.lien-icone:hover {
+  opacity: 0.5;
+}
+
+/* === Sections générales === */
+section {
+  padding: 80px 20px;
+  background-color: black;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Navigation & Footer === */
+footer,
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav a {
+  margin-left: 30px;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* === Images génériques === */
+.image-logo {
+  width: 100px;
+  height: auto;
+}
+
+.image-brit {
+  width: 350px;
+  height: auto;
+  max-width: 100%;
+}
+
+.facebook,
+.instagram,
+.googleMaps {
+  width: 40px;
+  height: 40px;
+}
+
+/* === Header & Footer avec dégradé vert === */
+header,
+footer {
+  background: linear-gradient(#2E8B57, #90EE90);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* === Lien Instagram spécifique === */
+.lien-insta {
+  margin-left: 30px;
+  width: 35px;
+  height: 35px;
+}
+
+.lien-insta:hover {
+  opacity: 0.5;
+}
+
+/* === Formulaire de contact === */
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='submit'] {
+  width: 300px;
+  margin: 30px auto 0 auto;
+  cursor: pointer;
+}
+
+/* === Section Accueil photos === */
+.accueil-photos img {
+  width: 900px;
+}
+
+.accueil-photos div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/* === Introduction de la page d’accueil === */
+.accueil-introduction {
+  background-color: black;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  font-family: 'Manrope', sans-serif;
+}
+
+.accueil-introduction h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #90EE90;
+}
+
+.accueil-introduction p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* === SECTION EVENEMENTS (modifiée pour le programme) === */
+.grid-évenements,
+.grid-portraits {
+  display: grid;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+.grid-évenements {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 400px;
+}
+
+.grid-portraits {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 300px;
+}
+
+.grid-évenements img,
+.grid-portraits img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Recadrage par défaut */
+  border-radius: 8px;
+}
+
+/*image programme affichée en entier */
+.grid-évenements .programme {
+  object-fit: contain;
+  /* garde l’image entière */
+  height: auto;
+  /* empêche la coupure */
+  max-height: none;
+  /* supprime les contraintes */
+  grid-row: auto;
+  /* s'adapte au contenu */
+  display: block;
+  margin: 0 auto;
+}
+
+.lien-conteneur-photo {
+  position: relative;
+}
+
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
+.lien-conteneur-photo:hover .photo-hover {
+  display: flex;
+}
+
+/* === Section "Underbrit" avec photo === */
+.underbrit-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.underbrit-photo img {
+  object-fit: contain;
+  width: 700px;
+  max-width: 700px;
+  height: auto;
+  padding-top: 60px;
+  border-radius: 10px;
+}
+
+/* === Bloc de contenu carré === */
+.carre-contenu {
+  border-right: 1px solid #90EE90;
+  border-bottom: 1px solid #90EE90;
+  padding: 50px;
+  width: 50%;
+  margin: 40px auto 80px auto;
+  box-sizing: border-box;
+}
+
+.carre-contenu h2 {
+  margin-top: 30px;
+}
+
+.carre-contenu ul {
+  margin-top: 30px;
+}
+
+.carre-contenu+div {
+  text-align: center;
+}
+
+/* === Tableaux === */
+table {
+  color: white;
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 15px;
+  border: 1px solid #90EE90;
+}
+
+td {
+  padding: 60px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* === Carte intégrée === */
+.carte {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* === RESPONSIVE DESIGN pour tablettes et mobiles === */
+@media screen and (max-width: 996px) {
+
+  /* Navigation en colonne */
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav img {
+    margin-bottom: 20px;
+  }
+
+  header,
+  footer {
+    padding: 20px 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 50px 20px;
+  }
+
+  nav a {
+    margin: 10px;
+  }
+
+  /* Texte plus lisible sur petits écrans */
+  .accueil-introduction {
+    padding: 20px 10px;
+    max-width: 100%;
+  }
+
+  .accueil-introduction h2 {
+    font-size: 2rem;
+  }
+
+  .accueil-introduction p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  /* Réduction des marges dans les photos */
+  .accueil-photos {
+    padding: 20px 10px;
+  }
+
+  .accueil-photos div {
+    flex-direction: column;
+  }
+
+  /* Bloc carré assoupli en mobile */
+  .carre-contenu {
+    width: 90%;
+    padding: 20px;
+    margin: 30px auto;
+    border: none;
+  }
+
+  /* Images adaptatives */
+  .underbrit-photo img {
+    width: 90%;
+    padding-top: 20px;
+  }
+}
+
+/*info de contact */
+.contact-section {
+  background-color: #000000;
+  color: #f8f8f8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.info-block {
+  flex: 1;
+  min-width: 250px;
+}
+
+.info-block h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.info-block a {
+  color: #f8f8f8;
+  text-decoration: none;
+}
+
+.info-block a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 30px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #f8f8f8;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+}
+
+/* === LIGHTBOX / DIAPORAMA === */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(144, 238, 144, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+.lightbox .close,
+.lightbox .prev,
+.lightbox .next {
+  position: absolute;
+  color: #90EE90;
+  font-size: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox .close {
+  top: 25px;
+  right: 35px;
+}
+
+.lightbox .prev {
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+}
+
+.lightbox .next {
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+}
+
+.lightbox .close:hover,
+.lightbox .prev:hover,
+.lightbox .next:hover {
+  color: #90EE90;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* === Section images Carte Menu & Formules === */
+.formules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Carte du menu */
+.menu-img {
+    width: 90%;
+    max-width: 800px;
+    display: block;
+    margin: 60px auto 60px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-img:hover {
+    transform: scale(1.05);
+}
+
+/* Formules */
+.formule-img {
+    width: 45%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.formule-img:hover {
+    transform: scale(1.05);
+}
+
+/* Marge entre images du bas et le footer */
+.formules:last-of-type {
+    margin-bottom: 100px;
+}
+
+/* === LIGHTBOX / DIAPORAMA === */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(144,238,144,0.3);
+    transition: opacity 0.3s ease;
+}
+
+.lightbox .close,
+.lightbox .prev,
+.lightbox .next {
+    position: absolute;
+    color: #90EE90;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+.lightbox .close { top: 25px; right: 35px; }
+.lightbox .prev { top: 50%; left: 40px; transform: translateY(-50%); }
+.lightbox .next { top: 50%; right: 40px; transform: translateY(-50%); }
+
+.lightbox .close:hover,
+.lightbox .prev:hover,
+.lightbox .next:hover {
+    color: #90EE90;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* === Adaptation Mobile === */
+@media (max-width: 768px) {
+    .menu-img { width: 80%; max-width: 700px; }
+    .formule-img { width: 90%; }
+    .lightbox img { max-width: 95%; max-height: 70vh; }
+    .lightbox .close, .lightbox button { font-size: 35px; }
+}

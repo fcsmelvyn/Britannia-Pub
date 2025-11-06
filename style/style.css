@@ -728,3 +728,41 @@ nav {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   /* Ombre pour plus de relief */
 }
+
+.evenements-a-venir {
+  padding-bottom: 10px !important;
+  margin-bottom: 0 !important;
+}
+
+/* === Agrandir tout le texte sur téléphone === */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.5em;
+    /* ⬅️ augmente la base du texte */
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p,
+  li {
+    font-size: 1.3em;
+  }
+
+  nav a,
+  footer,
+  table,
+  .carre-contenu,
+  .accueil-introduction {
+    font-size: 1.2em;
+  }
+
+  body {
+    font-size: clamp(16px, 2vw, 20px);
+  }
+}

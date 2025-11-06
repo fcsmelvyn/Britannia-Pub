@@ -603,7 +603,7 @@ nav a {
 }
 @media (max-width: 480px) {
   .evenements-a-venir {
-    font-size: 24px;
+    font-size: 50px;
   }
 }
 /* === Centrage du logo sur mobile === */

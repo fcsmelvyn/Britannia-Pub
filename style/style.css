@@ -601,6 +601,11 @@ nav a {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 480px) {
+  .evenements-a-venir {
+    font-size: 24px;
+  }
+}
 /* === Centrage du logo sur mobile === */
 @media screen and (max-width: 768px) {
   .accueil-photos {

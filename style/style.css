@@ -661,7 +661,7 @@ nav {
 /* Optionnel : sur petits écrans, réduire le nombre d’images par ligne */
 @media (max-width: 800px) {
   .gallery img {
-    width: calc((100% - 10px) / 2); /* 2 images par ligne */
+    width: calc((100% - 20px) / 2); /* 2 images par ligne */
   }
 }
 

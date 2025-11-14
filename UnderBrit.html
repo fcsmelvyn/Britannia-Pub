@@ -77,49 +77,6 @@
         <a class="prev">&#10094;</a>
         <a class="next">&#10095;</a>
     </div>
-    <script>
-const images = document.querySelectorAll('.underbrit-photo img');
-const lightbox = document.querySelector('.lightbox');
-const lightboxImg = document.querySelector('.lightbox-img');
-const closeBtn = document.querySelector('.close');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-
-let currentIndex = 0;
-
-// Ouvre la lightbox
-images.forEach((img, index) => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    currentIndex = index;
-    lightboxImg.src = img.src;
-  });
-});
-
-// Fermer lightbox
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
-
-// Navigation gauche
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  lightboxImg.src = images[currentIndex].src;
-});
-
-// Navigation droite
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % images.length;
-  lightboxImg.src = images[currentIndex].src;
-});
-
-// Fermer en cliquant en dehors de l'image
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) {
-    lightbox.style.display = 'none';
-  }
-});
-</script>
 </body>
 
 </html>

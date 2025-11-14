@@ -339,19 +339,6 @@ td {
 header nav img {
   margin-bottom: 20px;
 }
-/* === Navigation agrandie uniquement sur téléphone === */
-@media (max-width: 600px) {
-
-  nav {
-    font-size: 22px !important;  /* Taille générale augmentée */
-  }
-
-  nav a {
-    font-size: 22px !important;  /* Taille des liens */
-    margin: 15px !important;     /* Espacement plus confortable */
-  }
-
-}
 header,
 footer {
   padding: 20px 20px;
@@ -799,4 +786,17 @@ nav {
   body {
     font-size: clamp(16px, 2vw, 20px);
   }
+}
+/* === Navigation agrandie uniquement sur téléphone === */
+@media (max-width: 600px) {
+
+  nav {
+    font-size: 22px !important;  /* Taille générale augmentée */
+  }
+
+  nav a {
+    font-size: 22px !important;  /* Taille des liens */
+    margin: 15px !important;     /* Espacement plus confortable */
+  }
+
 }

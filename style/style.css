@@ -405,6 +405,38 @@ nav a {
   font-size: 2rem;
   margin-bottom: 20px;
 }
+/* === Agrandir la section contact sur téléphone === */
+@media (max-width: 600px) {
+
+  .contact-section {
+    font-size: 1.4em !important; /* texte général plus lisible */
+    padding: 40px 20px !important; /* un peu plus d’espace autour */
+  }
+
+  .contact-section h2 {
+    font-size: 2em !important; /* titre plus grand */
+    margin-bottom: 20px !important;
+  }
+
+  .contact-info {
+    font-size: 1.3em !important; /* texte et liens à l’intérieur */
+  }
+
+  .contact-info h3 {
+    font-size: 1.6em !important; /* titres des blocs d’infos */
+  }
+
+  .contact-info p,
+  .contact-info a {
+    font-size: 1.4em !important; /* textes et liens */
+  }
+
+  .social-links a {
+    font-size: 2em !important; /* icônes sociales plus grandes */
+    margin: 0 15px !important;
+  }
+
+}
 
 .contact-info {
   max-width: 800px;

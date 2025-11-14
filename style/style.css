@@ -329,6 +329,7 @@ td {
     justify-content: center;
     /* 👈 centré horizontalement */
     flex-wrap: wrap;
+    font-size: 22px !important;
   }
 
   nav a {

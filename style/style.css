@@ -353,7 +353,17 @@ td {
         padding-top: 20px;
     }
 }
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column; /* si vous voulez que les onglets soient en colonne */
+    justify-content: center;
+    align-items: center;
+  }
 
+  .nav-menu li {
+    margin: 5px 0;
+  }
+}
 /* Contact section responsive */
 .contact-section {
     color: #f8f8f8;

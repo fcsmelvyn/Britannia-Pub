@@ -309,7 +309,7 @@ td {
     header nav {
         flex-direction: row;
         flex-wrap: wrap;
-        font-size: 100px !important;
+        font-size: 30px !important;
     }
     nav a {
         margin: 10px;

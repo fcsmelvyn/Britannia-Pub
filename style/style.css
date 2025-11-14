@@ -346,7 +346,12 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
+/* Style pour téléphones */
+@media (max-width: 600px) {
+    footer {
+        font-size: 20px; /* agrandir ici */
+    }
+}
 h1 {
   font-size: 2em;
 }

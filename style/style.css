@@ -557,3 +557,54 @@ td {
   }
 
 }
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Close button */
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Navigation arrows */
+.lightbox .prev,
+.lightbox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px 20px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 5px;
+}
+
+.lightbox .prev:hover,
+.lightbox .next:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.lightbox .prev { left: 30px; }
+.lightbox .next { right: 30px; }

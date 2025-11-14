@@ -1,610 +1,567 @@
-/* === Reset global pour uniformiser les styles === */
+/* =========================================
+   RESET GLOBAL
+   ========================================= */
 * {
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-/* === Styles de base du body === */
+/* =========================================
+   STYLES DE BASE DU BODY
+   ========================================= */
 body {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1rem; /* taille par défaut */
-  background-color: #000000;
-  color: white;
-  line-height: 1.6;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    background-color: #000000;
+    color: white;
 }
 
-/* === Liens généraux === */
+/* =========================================
+   LIENS GÉNÉRAUX
+   ========================================= */
 a {
-  color: #90EE90;
-  text-decoration: none;
+    color: #90EE90; /* Vert clair visible sur fond noir */
+    text-decoration: none;
 }
-
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* === Texte en italique (personnalisé) === */
+/* =========================================
+   TEXTE EN ITALIQUE
+   ========================================= */
 em {
-  color: #a5b4fc;
-  font-style: normal;
+    color: #a5b4fc;
+    font-style: normal;
 }
 
-/* === Titres principaux === */
+/* =========================================
+   TITRES
+   ========================================= */
 h1 {
-  font-size: 3.5rem;
-  color: #90EE90;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #90EE90;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* === Paragraphes et listes === */
-p,
-li {
-  font-size: 1.1rem;
-  color: #ffffff;
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 20px auto;
-}
-
-/* === Boutons d’appel à l’action (CTA) === */
-.cta {
-  display: inline-block;
-  background-color: #2E8B57;
-  border-radius: 50px;
-  padding: 20px 30px;
-  color: white;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.cta:hover {
-  background: linear-gradient(#2E8B57, #90EE90);
-}
-
-/* === Liens avec icônes (réseaux, etc.) === */
-.lien-icone {
-  margin-left: 30px;
-}
-
-.lien-icone:hover {
-  opacity: 0.5;
-}
-
-/* === Sections générales === */
-section {
-  padding: 80px 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* === Navigation & Footer === */
-nav,
-footer {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-nav a {
-  margin-left: 30px;
-  color: #000000;
-  font-weight: 600;
-}
-
-/* === Images génériques === */
-.image-logo {
-  width: 100px;
-  height: auto;
-}
-
-.image-brit {
-  width: 350px;
-  height: auto;
-  max-width: 100%;
-}
-
-.facebook,
-.instagram,
-.googleMaps {
-  width: 40px;
-  height: 40px;
-}
-
-/* === Header & Footer avec dégradé vert === */
-header,
-footer {
-  background: linear-gradient(#2E8B57, #90EE90);
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-/* === Lien Instagram spécifique === */
-.lien-insta {
-  margin-left: 30px;
-  width: 35px;
-  height: 35px;
-}
-
-.lien-insta:hover {
-  opacity: 0.5;
-}
-
-/* === Section Accueil photos === */
-.accueil-photos div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
-.accueil-photos img {
-  width: 600px;
-  max-width: 100%;
-  height: auto;
-}
-
-/* === Introduction de la page d’accueil === */
-.accueil-introduction {
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 60px auto;
-}
-
-.accueil-introduction h2 {
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #90EE90;
-}
-
-.accueil-introduction p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* === Section Événements et portraits === */
-.grid-évenements,
-.grid-portraits {
-  display: grid;
-  gap: 15px;
-  max-width: 900px;
-  margin: 0 auto 40px auto;
-}
-
-.grid-évenements {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 400px;
-}
-
-.grid-portraits {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 300px;
-}
-
-.grid-évenements img,
-.grid-portraits img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.grid-évenements .programme {
-  object-fit: contain;
-  height: auto;
-  max-height: none;
-  grid-row: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* === Effet hover sur les photos d'événements === */
-.lien-conteneur-photo {
-  position: relative;
-}
-
-.photo-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
-}
-
-.lien-conteneur-photo:hover .photo-hover {
-  display: flex;
-}
-
-/* === Section Underbrit === */
-.underbrit-photo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 60px;
-}
-
-.underbrit-photo img {
-  object-fit: contain;
-  width: 700px;
-  max-width: 700px;
-  height: auto;
-  padding-top: 60px;
-  border-radius: 10px;
-}
-
-/* === Bloc de contenu carré === */
-.carre-contenu {
-  border-right: 1px solid #90EE90;
-  border-bottom: 1px solid #90EE90;
-  padding: 50px;
-  width: 50%;
-  margin: 40px auto 80px auto;
-  box-sizing: border-box;
-}
-
-.carre-contenu h2 {
-  margin-top: 30px;
-}
-
-.carre-contenu ul {
-  margin-top: 30px;
-}
-
-/* === Tableaux === */
-table {
-  color: white;
-  text-align: center;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-td,
-th {
-  padding: 15px;
-  border: 1px solid #90EE90;
-}
-
-td {
-  padding: 60px;
-}
-
-/* === Carte intégrée === */
-.carte {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-}
-
-/* === Section Contact === */
-.contact-section {
-  color: #f8f8f8;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.contact-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.contact-info {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.info-block {
-  flex: 1;
-  min-width: 250px;
-}
-
-.info-block h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.info-block a {
-  color: #f8f8f8;
-  text-decoration: none;
-}
-
-.info-block a:hover {
-  text-decoration: underline;
-}
-
-.social-links {
-  margin-top: 30px;
-}
-
-.social-links a {
-  margin: 0 10px;
-  color: #f8f8f8;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-.social-links a:hover {
-  opacity: 0.7;
-}
-
-/* === Galerie d’images === */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.gallery img {
-  width: calc((100% - 20px) / 3);
-  height: auto;
-  object-fit: cover;
-  border-radius: 5px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.gallery img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* === Lightbox === */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 10px;
-}
-
-.close,
-.prev,
-.next {
-  position: absolute;
-  color: white;
-  font-size: 40px;
-  cursor: pointer;
-  user-select: none;
-}
-
-/* === Formules et menu images === */
-.formules {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.menu-img {
-  width: 90%;
-  max-width: 800px;
-  margin: 60px auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.menu-img:hover {
-  transform: scale(1.05);
-}
-
-.formule-img {
-  width: 45%;
-  max-width: 500px;
-  border-radius: 15px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  margin-bottom: 50px;
-}
-
-.formule-img:hover {
-  transform: scale(1.05);
-}
-
-/* === Google Maps intégré === */
-.google-maps {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 20px 0;
-}
-
-.google-maps iframe {
-  border: 0;
-  width: 80%;
-  max-width: 800px;
-  height: 450px;
-  border-radius: 10px;
-}
-
-/* === Responsive design général === */
-
-/* Tablette / petits écrans */
-@media (max-width: 768px) {
-
-  body {
-    font-size: 1.2rem;
-  }
-
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  p, li { font-size: 1.3rem; }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    margin: 10px 0;
-    font-size: 1.4rem;
-  }
-
-  .contact-info {
-    font-size: 1.2rem;
-  }
-
-  .contact-info h3 {
-    font-size: 1.5rem;
-  }
-
-  .contact-info p, .contact-info a {
-    font-size: 1.3rem;
-  }
-
-  .accueil-photos img {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-
-  .evenements-section-photos {
-    flex-direction: column;
-    align-items: center;
-    max-width: 90%;
+    font-size: 3.5em;
+    color: #90EE90;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
     margin-bottom: 20px;
-  }
+}
+h2 {
+    color: #90EE90;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/* Mobile (téléphone) */
-@media (max-width: 600px) {
+/* =========================================
+   PARAGRAPHES ET LISTES
+   ========================================= */
+p, li {
+    font-size: 1.1em;
+    color: #ffffff;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+}
 
-  body { font-size: 1.4rem; }
+/* =========================================
+   BOUTONS CTA
+   ========================================= */
+.cta {
+    display: inline-block;
+    background-color: #2E8B57;
+    border-radius: 50px;
+    padding: 20px 30px;
+    color: white;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+.cta:hover {
+    background: linear-gradient(#2E8B57, #90EE90);
+    text-decoration: none;
+}
 
-  h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.8rem; }
-  p, li { font-size: 1.4rem; }
+/* =========================================
+   LIENS AVEC ICONES
+   ========================================= */
+.lien-icone {
+    margin-left: 30px;
+}
+.lien-icone:hover {
+    opacity: 0.5;
+}
 
-  nav {
-    font-size: 1.5rem;
+/* =========================================
+   SECTIONS
+   ========================================= */
+section {
+    padding: 80px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   NAVIGATION & FOOTER
+   ========================================= */
+nav, footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+nav a {
+    margin-left: 30px;
+    color: #000000;
+    font-weight: 600;
+}
+header, footer {
+    background: linear-gradient(#2E8B57, #90EE90);
     justify-content: center;
-  }
+    align-items: center;
+    flex-wrap: wrap;
+}
+header nav img {
+    margin-bottom: 20px;
+}
 
-  nav a {
-    font-size: 1.5rem;
-    margin: 15px;
-  }
+/* =========================================
+   IMAGES
+   ========================================= */
+.image-logo {
+    width: 100px;
+    height: auto;
+}
+.image-brit {
+    width: 350px;
+    height: auto;
+    max-width: 100%;
+}
+.facebook, .instagram, .googleMaps {
+    width: 40px;
+    height: 40px;
+}
 
-  .contact-section {
-    font-size: 1.4rem;
-    padding: 40px 20px;
-  }
+/* =========================================
+   SECTION ACCUEIL PHOTOS
+   ========================================= */
+.accueil-photos img {
+    width: 600px;
+}
+.accueil-photos div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
 
-  .contact-section h2 {
-    font-size: 2rem;
-  }
+/* =========================================
+   INTRODUCTION ACCUEIL
+   ========================================= */
+.accueil-introduction {
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    font-family: 'Manrope', sans-serif;
+}
+.accueil-introduction h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #90EE90;
+}
+.accueil-introduction p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 700px;
+}
 
-  .contact-info {
-    font-size: 1.3rem;
-  }
-
-  .contact-info h3 { font-size: 1.6rem; }
-  .contact-info p, .contact-info a { font-size: 1.4rem; }
-
-  .social-links a {
-    font-size: 2rem;
-    margin: 0 15px;
-  }
-
-  .accueil-photos img {
-    max-width: 90%;
-  }
-
-  .gallery img {
+/* =========================================
+   GRILLES ÉVÉNEMENTS & PORTRAITS
+   ========================================= */
+.grid-évenements, .grid-portraits {
+    display: grid;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+.grid-évenements {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 400px;
+}
+.grid-portraits {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 300px;
+}
+.grid-évenements img, .grid-portraits img {
     width: 100%;
-  }
-
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
-/* Lightbox overlay */
+.grid-évenements .programme {
+    object-fit: contain;
+    height: auto;
+    max-height: none;
+    grid-row: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =========================================
+   HOVER SUR PHOTOS
+   ========================================= */
+.lien-conteneur-photo {
+    position: relative;
+}
+.photo-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+.lien-conteneur-photo:hover .photo-hover {
+    display: flex;
+}
+
+/* =========================================
+   SECTION UNDERBRIT
+   ========================================= */
+.underbrit-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.underbrit-photo img {
+    object-fit: contain;
+    width: 700px;
+    max-width: 700px;
+    height: auto;
+    padding-top: 60px;
+    border-radius: 10px;
+}
+
+/* =========================================
+   BLOC CARRE
+   ========================================= */
+.carre-contenu {
+    border-right: 1px solid #90EE90;
+    border-bottom: 1px solid #90EE90;
+    padding: 50px;
+    width: 50%;
+    margin: 40px auto 80px auto;
+    box-sizing: border-box;
+}
+.carre-contenu h2 {
+    margin-top: 30px;
+}
+.carre-contenu ul {
+    margin-top: 30px;
+}
+
+/* =========================================
+   TABLEAUX
+   ========================================= */
+table {
+    color: white;
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 15px;
+    border: 1px solid #90EE90;
+}
+td {
+    padding: 60px;
+}
+
+/* =========================================
+   CARTE GOOGLE MAPS
+   ========================================= */
+.carte {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* Tablettes et petits écrans */
+@media screen and (max-width: 996px) {
+    header nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 22px !important;
+    }
+    nav a {
+        margin: 10px;
+    }
+}
+@media (max-width: 600px) {
+    footer {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    section {
+        padding: 50px 20px;
+    }
+    nav a {
+        margin: 10px;
+    }
+    .accueil-introduction {
+        padding: 20px 10px;
+        max-width: 100%;
+    }
+    .accueil-introduction h2 {
+        font-size: 2rem;
+    }
+    .accueil-introduction p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+    .accueil-photos {
+        padding: 20px 10px;
+    }
+    .carre-contenu {
+        width: 90%;
+        padding: 20px;
+        margin: 30px auto;
+        border: none;
+    }
+    .underbrit-photo img {
+        width: 90%;
+        padding-top: 20px;
+    }
+}
+
+/* Contact section responsive */
+.contact-section {
+    color: #f8f8f8;
+    padding: 60px 20px;
+    text-align: center;
+}
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+    .contact-section {
+        font-size: 1.4em !important;
+        padding: 40px 20px !important;
+    }
+    .contact-section h2 {
+        font-size: 2em !important;
+        margin-bottom: 20px !important;
+    }
+    .contact-info {
+        font-size: 1.3em !important;
+    }
+    .contact-info h3 {
+        font-size: 1.6em !important;
+    }
+    .contact-info p, .contact-info a {
+        font-size: 1.4em !important;
+    }
+    .social-links a {
+        font-size: 2em !important;
+        margin: 0 15px !important;
+    }
+}
+
+/* =========================================
+   LIGHTBOX / DIAPORAMA
+   ========================================= */
 .lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
 }
-
-.lightbox-img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+.lightbox img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(144, 238, 144, 0.3);
+    transition: opacity 0.3s ease;
 }
-
-/* Close button */
+.lightbox .close, .lightbox .prev, .lightbox .next {
+    position: absolute;
+    color: #90EE90;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
 .lightbox .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 40px;
-  cursor: pointer;
-  user-select: none;
+    top: 25px;
+    right: 35px;
 }
-
-/* Navigation arrows */
-.lightbox .prev,
+.lightbox .prev {
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+}
 .lightbox .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  font-size: 50px;
-  cursor: pointer;
-  user-select: none;
-  padding: 10px 20px;
-  background: rgba(0,0,0,0.4);
-  border-radius: 5px;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+}
+.lightbox .close:hover, .lightbox .prev:hover, .lightbox .next:hover {
+    color: #90EE90;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.lightbox .prev:hover,
-.lightbox .next:hover {
-  background: rgba(0,0,0,0.7);
+/* =========================================
+   GALLERY / FORMULES / MENU
+   ========================================= */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.gallery img {
+    width: 600px;
+    height: 900px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 800px) {
+    .gallery img { width: calc((100% - 20px) / 2); }
+}
+@media (max-width: 500px) {
+    .gallery img { width: 100%; }
 }
 
-.lightbox .prev { left: 30px; }
-.lightbox .next { right: 30px; }
+/* Menu images */
+.menu-img {
+    width: 90%;
+    max-width: 800px;
+    display: block;
+    margin: 60px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.menu-img:hover {
+    transform: scale(1.05);
+}
+.formules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.formule-img {
+    width: 45%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+.formule-img:hover {
+    transform: scale(1.05);
+}
+
+/* Google Maps intégré */
+.google-maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+.google-maps iframe {
+    border: 0;
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+/* =========================================
+   AUTRES AJUSTEMENTS
+   ========================================= */
+.titre {
+    padding-bottom: 10px !important;
+    margin-bottom: 0 !important;
+}
+.evenements-section-photos {
+    padding-top: 10px !important;
+    margin-top: 0 !important;
+}
+
+/* =========================================
+   RESPONSIVE SUPPLÉMENTAIRE
+   ========================================= */
+@media (max-width: 768px) {
+    .evenements-section-photos {
+        flex-direction: column;
+        align-items: center;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    .accueil-photos {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .accueil-photos div {
+        width: 100%;
+    }
+    .accueil-photos img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        height: auto;
+    }
+    body {
+        font-size: 1.5em;
+    }
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; }
+    p, li { font-size: 1.3em; }
+    nav a, footer, table, .carre-contenu, .accueil-introduction { font-size: 1.2em; }
+    body { font-size: clamp(16px, 2vw, 20px); }
+}

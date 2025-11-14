@@ -339,15 +339,18 @@ td {
 header nav img {
   margin-bottom: 20px;
 }
-/* Version agrandie pour téléphones */
+/* === Navigation agrandie uniquement sur téléphone === */
 @media (max-width: 600px) {
-    nav {
-        font-size: 20px; /* augmente la taille ici */
-    }
 
-    nav a {
-        font-size: 20px; /* utile si tes liens ont un style séparé */
-    }
+  nav {
+    font-size: 22px !important;  /* Taille générale augmentée */
+  }
+
+  nav a {
+    font-size: 22px !important;  /* Taille des liens */
+    margin: 15px !important;     /* Espacement plus confortable */
+  }
+
 }
 header,
 footer {

@@ -339,7 +339,16 @@ td {
 header nav img {
   margin-bottom: 20px;
 }
+/* Version agrandie pour téléphones */
+@media (max-width: 600px) {
+    nav {
+        font-size: 20px; /* augmente la taille ici */
+    }
 
+    nav a {
+        font-size: 20px; /* utile si tes liens ont un style séparé */
+    }
+}
 header,
 footer {
   padding: 20px 20px;

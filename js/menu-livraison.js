@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const gallery = document.getElementById("gallery");
 
-    const IMAGE_COUNT = 23;
+    const IMAGE_COUNT = 19;
     const IMAGE_PATH = "images/menu/";
     const IMAGE_EXT = ".jpeg";
 

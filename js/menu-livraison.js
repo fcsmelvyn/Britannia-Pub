@@ -9,17 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const images = [];
     let currentIndex = 0;
 
-    // Création galerie
+    // Création de la galerie
     for (let i = 1; i <= IMAGE_COUNT; i++) {
         const img = document.createElement("img");
-        img.src = `${IMAGE_PATH}menu${i}${IMAGE_EXT}`;
+        const src = `${IMAGE_PATH}menu${i}${IMAGE_EXT}`;
+
+        img.src = src;
         img.alt = `Menu ${i}`;
         img.loading = "lazy";
 
-        img.addEventListener("click", () => openLightbox(i - 1));
+        img.addEventListener("click", () => openLightbox(images.indexOf(src)));
 
         gallery.appendChild(img);
-        images.push(img.src);
+        images.push(src);
     }
 
     // Lightbox
@@ -53,12 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn.addEventListener("click", prevImage);
     closeBtn.addEventListener("click", closeLightbox);
 
-    document.addEventListener("keydown", e => {
+    document.addEventListener("keydown", (e) => {
         if (lightbox.style.display === "flex") {
             if (e.key === "ArrowRight") nextImage();
             if (e.key === "ArrowLeft") prevImage();
             if (e.key === "Escape") closeLightbox();
         }
     });
-
 });

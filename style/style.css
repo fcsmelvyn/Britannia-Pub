@@ -19,13 +19,13 @@ body {
    LIENS
 ========================================= */
 a {
-    color: #90EE90;
+    color: #000000;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #2E8B57;
+    color: #000000;
     text-decoration: underline;
 }
 
@@ -51,7 +51,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: #000000;
 }
 
 /* =========================================

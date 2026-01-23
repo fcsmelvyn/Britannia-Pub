@@ -20,11 +20,6 @@ a {
     transition: all 0.3s ease;
 }
 
-a:hover {
-    color: #000000;
-    text-decoration: underline;
-}
-
 /* ========================================= HEADER & NAV ========================================= */
 header {
     background: linear-gradient(to right, #2E8B57, #90EE90);

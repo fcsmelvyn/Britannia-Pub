@@ -24,11 +24,6 @@ a {
     transition: all 0.3s ease;
 }
 
-a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
 lien {
     color: #ffffff;
     text-decoration: none;

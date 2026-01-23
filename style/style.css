@@ -25,7 +25,7 @@ a {
 }
 
 lien {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -49,10 +49,6 @@ nav a {
     font-weight: 600;
     font-size: 1.1rem;
     text-transform: uppercase;
-}
-
-nav a:hover {
-    color: #000000;
 }
 
 /* =========================================

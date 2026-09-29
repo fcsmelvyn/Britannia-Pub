@@ -64,8 +64,9 @@ h2 {
     display: grid;
     gap: 20px;
     max-width: 900px;
+    width: 90%;
     margin: 0 auto 50px auto;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
 }
 
 .grid-évenements img {
@@ -79,7 +80,7 @@ h2 {
 }
 
 .grid-évenements img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
@@ -88,6 +89,45 @@ h2 {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+/* ========================================= VIDÉO FDV ========================================= */
+
+.video-fdv {
+    display: block;
+
+    /* Taille */
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+
+    /* Centrage */
+    margin: 0 auto;
+
+    /* Design */
+    border-radius: 15px;
+    overflow: hidden;
+
+    /* Ombre */
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(144, 238, 144, 0.10);
+
+    /* Fond noir pendant le chargement */
+    background-color: #000;
+
+    /* Évite les comportements étranges */
+    object-fit: contain;
+
+    /* Animation légère */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-fdv:hover {
+    transform: scale(1.01);
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.8),
+        0 0 25px rgba(144, 238, 144, 0.15);
 }
 
 /* ========================================= GALERIE ========================================= */
@@ -188,8 +228,13 @@ h2 {
 
 /* ========================================= ANIMATIONS ========================================= */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* ========================================= FOOTER ========================================= */
@@ -216,50 +261,87 @@ footer img:hover {
     transform: scale(1.2);
 }
 
-/* ========================================= RESPONSIVE ========================================= */
+/* ========================================= RESPONSIVE TABLETTE ========================================= */
 @media (max-width: 1024px) {
+
     .gallery {
         gap: 15px;
     }
+
     .grid-évenements {
+        width: 92%;
         grid-auto-rows: auto;
+    }
+
+    .video-fdv {
+        width: 100%;
     }
 }
 
+/* ========================================= RESPONSIVE MOBILE ========================================= */
 @media (max-width: 768px) {
+
     h1 {
         font-size: 2.5rem;
         margin: 20px 0;
     }
+
     h2 {
         font-size: 1.8rem;
     }
+
+    .grid-évenements {
+        width: 94%;
+        margin-bottom: 30px;
+    }
+
+    .grid-évenements img {
+        height: auto;
+    }
+
+    /* Vidéo mobile */
+    .video-fdv {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+
     .gallery {
         flex-direction: column;
         gap: 20px;
     }
+
     .gallery img {
         width: 90%;
         height: auto;
         margin: 0 auto;
     }
-    .grid-évenements img {
-        height: auto;
-    }
+
     .lightbox .close {
         font-size: 2rem;
         top: 15px;
         right: 20px;
     }
-    .lightbox .prev, .lightbox .next {
+
+    .lightbox .prev,
+    .lightbox .next {
         font-size: 2.5rem;
+    }
+
+    .lightbox .prev {
         left: 20px;
+    }
+
+    .lightbox .next {
         right: 20px;
     }
+
     .lightbox img {
         max-width: 95%;
         max-height: 70%;
     }
+
     footer img {
         width: 35px;
         height: 35px;
